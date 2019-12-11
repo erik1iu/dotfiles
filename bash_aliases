@@ -43,3 +43,6 @@ alias ,,,,,,,,,='cd ../../../../../../../../..'
 alias ,,,,,,,,,,='cd ../../../../../../../../../..'
 alias q!='exit'
 alias p='cd -'
+
+alias vif='vim $(fzf)'
+alias vimf='vif'

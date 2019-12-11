@@ -1,5 +1,4 @@
 # dotfiles
-My dotfiles
 
 ### Usage
 
@@ -16,18 +15,10 @@ $ bash setup.sh
 
 ### vim
 
-1. vimrc
-2. TagHighLight
+**Stay Normal**
+If you only take one thing away from reading this blog post, let it be this:
+Normal mode is your best friend!
 
-### JetBrain
-TODO
-
-### vscode
-
-1. settings.json
-2. keybindings.json
-
-### git
-
-1. gitignore
-2. gitconfig
+Avoid staying in insert mode for extended periods of time. And also, don’t move
+along the file while in insert mode. It might be difficult in the beginning, but
+once you get used to it, you will see how much faster you become. ;)
