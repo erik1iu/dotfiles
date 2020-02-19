@@ -1,13 +1,13 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer:
-"       Eric Liu — @qc1iu
+"       Eric Liu — @erik1iu
 "
 " Sections:
-"    -> Plugins
-"    -> General settings
-"    -> Key mappings
-"    -> Autocmd
-"    -> Misc
+"     -> Plugins
+"     -> General settings
+"     -> Key mappings
+"     -> Autocmd
+"     -> Misc
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -252,6 +252,9 @@ nnoremap <Leader>h :History<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Autocmd
+"
+" NOTE: Put all filetype-specific settings to where they should belong in
+" ftplugins floder, because FileType autocmds are pointless and wasteful.
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Highlight the current insert line
 autocmd InsertEnter,InsertLeave * set cul!

@@ -16,7 +16,7 @@ $ bash setup.sh
 ### vim
 
 **Stay Normal**
-If you only take one thing away from reading this blog post, let it be this:
+
 Normal mode is your best friend!
 
 Avoid staying in insert mode for extended periods of time. And also, don’t move
