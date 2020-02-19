@@ -243,8 +243,11 @@ nnoremap <Leader>s :tab split<CR>
 " Make fzf performs more like CtrlP
 nnoremap <C-p> :Files<CR>
 
-" Another shortcut key for fzf, to change buffer by fuzzing search
+" Shortcut key for fzf, to change buffer by fuzzing search
 nnoremap <Leader>b :Buffers<CR>
+
+" Shortcut key for fzf, v:oldfiles and open buffers
+nnoremap <Leader>h :History<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
