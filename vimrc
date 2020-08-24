@@ -259,6 +259,11 @@ nnoremap <Leader>h :History<CR>
 " Highlight the current insert line
 autocmd InsertEnter,InsertLeave * set cul!
 
+" Open file at the same line
+" https://stackoverflow.com/a/775918/5262383
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Misc
