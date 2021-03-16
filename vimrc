@@ -1,6 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer:
-"       Eric Liu — @erik1iu
+"       Eric Liu — @theRealELiu
 "
 " Sections:
 "     -> Plugins
@@ -41,8 +41,8 @@ let g:fzf_layout = { 'window': 'bot'.float2nr(&lines * 0.4).'new' }
 
 Plugin 'ekalinin/Dockerfile.vim'
 
-" My own plugin for OpenJDK project.
-Plugin 'qc1iu/openjdk-ad.vim'
+" Personal plugin for OpenJDK project.
+Plugin 'theRealELiu/openjdk-ad.vim'
 
 Plugin 'reedes/vim-wordy'
 
@@ -195,9 +195,8 @@ inoremap  <Down>  <Nop>
 inoremap  <Left>  <Nop>
 inoremap  <Right> <Nop>
 
-" Show trailing whitespace
-" See https://vim.fandom.com/wiki/Highlight_unwanted_spaces
-nnoremap <Leader>tw /\s\+$<CR>
+" Quick tabprevious on terminal mod
+tnoremap gt <C-w>:tabprevious<CR>
 
 " Quicker change to normal mode
 inoremap jk <Esc>
@@ -205,6 +204,15 @@ inoremap jk <Esc>
 " When the <Esc> is part of a mapping, the command is executed(in cmd mode),
 " so we use <C-c> instead.
 cnoremap jk <C-c>
+
+" Go to end-of-line in insert & cmd mode
+noremap! <C-e> <End>
+
+" Make fzf performs more like CtrlP
+nnoremap <C-p> :Files<CR>
+
+" Go to head-of-line in insert & cmd mode
+noremap! <C-a> <Home>
 
 """ Window resize
 noremap  <C-w>=  :resize +3<CR>
@@ -215,17 +223,27 @@ noremap  <C-w>,  :vertical resize -3<CR>
 
 noremap  <C-w>.  :vertical resize +3<CR>
 
-" Quick save.
-noremap  <Leader>w :w!<CR>
+" Shortcut key for fzf, to change buffer by fuzzing search
+nnoremap <Leader>b :Buffers<CR>
+
+" Shortcut key for fzf, v:oldfiles and open buffers
+nnoremap <Leader>h :History<CR>
+
+" Shortcut for opening terminal in a new tab
+nnoremap <Leader>tt :tab ter<CR>
+
+" Show trailing whitespace
+" See https://vim.fandom.com/wiki/Highlight_unwanted_spaces
+nnoremap <Leader>tw /\s\+$<CR>
 
 " Quick exit
 noremap  <Leader>q :q!<CR>
 
-" Go to end-of-line in insert & cmd mode
-noremap! <C-e> <End>
+" Opens current buffer in new tab page
+nnoremap <Leader>s :tab split<CR>
 
-" Go to head-of-line in insert & cmd mode
-noremap! <C-a> <Home>
+" Quick save.
+noremap  <Leader>w :w!<CR>
 
 " Quick open and close NERDTree
 inoremap <F3> <Esc>:NERDTreeToggle<CR>
@@ -236,19 +254,6 @@ nnoremap <F3> <Esc>:NERDTreeToggle<CR>
 inoremap <F12> <Esc>:TagbarToggle<CR>
 
 nnoremap <F12> <Esc>:TagbarToggle<CR>
-
-" Opens current buffer in new tab page
-nnoremap <Leader>s :tab split<CR>
-
-" Make fzf performs more like CtrlP
-nnoremap <C-p> :Files<CR>
-
-" Shortcut key for fzf, to change buffer by fuzzing search
-nnoremap <Leader>b :Buffers<CR>
-
-" Shortcut key for fzf, v:oldfiles and open buffers
-nnoremap <Leader>h :History<CR>
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Autocmd

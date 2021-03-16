@@ -64,10 +64,5 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 msg "Install Plugin"
 vim +PluginInstall +qall
 
-msg "Checkout fzf to 0.24.4"
-pushd $DOT_TOP/vim/bundle/fzf
-git checkout 00a36103
-popd
-
 msg "Install fzf"
 bash $DOT_TOP/vim/bundle/fzf/install
